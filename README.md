@@ -2,13 +2,11 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0%2B-blue.svg)](https://www.typescriptlang.org/)
 [![MCP](https://img.shields.io/badge/Protocol-MCP-orange.svg)](https://modelcontextprotocol.io/)
 
-## Qu'est-ce que le Model Context Protocol (MCP) ?
+## C'est quoi MCP ?
 
-### Définition Technique
+Model Context Protocol (MCP) est un protocole de communication standardisé qui permet à des clients LLM (local ou distant) d'interagir avec des systèmes externes (bases de données, APIs, services web, systèmes de fichiers).
 
-Le Model Context Protocol (MCP) est un protocole de communication standardisé qui permet à des clients LLM (local ou distant) d'interagir avec des systèmes externes (bases de données, APIs, services web, systèmes de fichiers).
-
-### Architecture fondamentale
+### Architecture
 
 MCP repose sur 3 composants principaux :
 
@@ -16,9 +14,7 @@ MCP repose sur 3 composants principaux :
 2. **Client MCP** : Application qui consomme les services exposés par les serveurs
 3. **Transport Layer** : Mécanisme de communication entre client et serveur
 
-### Mécanisme de fonctionnement
-
-#### 1. Établissement de la Communication
+### Le fonctionnement
 
 ```
 Client MCP ←→ Transport Layer ←→ Serveur MCP
@@ -29,20 +25,12 @@ Le client initie une connexion avec le serveur via l'un des transports supporté
 - **WebSocket** : Communication réseau bidirectionnelle
 - **HTTP** : Communication requête/réponse traditionnelle
 
-#### 2. Découverte des capacités
 
 Le serveur MCP expose ses capacités via des schémas structurés :
 - **Tools** : Fonctions exécutables (lecture fichier, requête API, calcul)
 - **Resources** : Données accessibles (documents, bases de données, logs)
 - **Prompts** : Templates de requêtes prédéfinies
 
-#### 3. Exécution des requêtes
-
-Le protocole MCP définit des types de requêtes standardisés :
-- `tools/list` : Énumération des outils disponibles
-- `tools/call` : Exécution d'un outil avec paramètres
-- `resources/list` : Listage des ressources accessibles
-- `resources/read` : Lecture d'une ressource spécifique
 
 ### Avantages techniques
 
@@ -61,23 +49,5 @@ Le protocole MCP définit des types de requêtes standardisés :
 - **Versioning** : Gestion des évolutions de protocole
 - **Standardisation** : Format uniforme des échanges
 
-### Cas d'usage 
 
-
-#### Intégration système
-- Connexion aux bases de données d'entreprise
-- Accès aux APIs internes et externes
-- Manipulation de systèmes de fichiers
-- Contrôle d'infrastructures (Docker, Kubernetes)
-
-#### Automatisation
-- Exécution de workflows N8N
-- Déploiement d'applications
-- Monitoring et alerting
-- Traitement de données en lot
-
-#### Développement
-- Génération de code assistée
-- Tests automatisés
-- Documentation technique
-- Refactoring intelligent
+Découvrez mes projets MCP dans ce repo, n'hésitez pas à contribuer et poser des questions si besoin !
